@@ -2036,6 +2036,10 @@ ripple.ripple::after {
 .profile_top {
     height: 130px;
 }
+.profile_top.right {
+    float: right;
+    margin-top: 40px;
+}
 .userprofile_img {
     top: -90px;
     height: 250px;
@@ -2060,7 +2064,7 @@ ripple.ripple::after {
     display: inline-block;
     vertical-align: top;
     margin-top: 25px;
-    margin-left: 230px;
+    margin-left: 310px;
 }
 .profile-top-separator {
     vertical-align: bottom;
@@ -2082,14 +2086,14 @@ ripple.ripple::after {
     margin-right: auto;
 }
 .camera {
-    min-width: 44px;
-    width: 44px;
+    min-width: 55px;
+    width: 55px;
     padding: 0 10px;
     background: #cecece;
     border-radius: 3px;
     position: absolute;
-    top: 85px;
-    left: 140px;
+    top: 115px;
+    left: 180px;
     cursor: pointer;
 }
 .camera:hover {
@@ -2099,7 +2103,7 @@ ripple.ripple::after {
     position: relative;
 }
 .camera img {
-    height: 18px;
+    height: 25px;
     width: auto;
     margin-left: auto;
     margin-right: auto;
@@ -2109,8 +2113,8 @@ ripple.ripple::after {
 .userID_img {
   margin-top: 10px;
   margin-bottom: 30px;
-  width: 150px;
-  height: 110px;
+  width: 180px;
+  height: 135px;
   border: 1px solid #acacac;
   background-position: center center;
   background-size: cover;
@@ -2126,26 +2130,26 @@ ripple.ripple::after {
     display: none;
 }
 .id_upload_desc {
-  width: 250px;
+  width: 370px;
   text-align: justify;
 }
 .id_upload_desc span {
   width: 100%;
   display: block;
   white-space: normal;
-  font-size: 0.7em;
-  line-height: 14px;
+  font-size: 0.9em;
+  line-height: 17px;
   padding-top: 10px;
 }
 .profile-form {
     width: 100%;
     float: left;
     text-align: left;
-    margin-left: 30px;
+    margin-left: 80px;
 }
 .profile-form .form-row {
     white-space: nowrap;
-    max-width: 680px;
+    max-width: 900px;
     height: 50px;
 }
 .profile-form .form-row.birthday {
@@ -2154,8 +2158,7 @@ ripple.ripple::after {
 }
 .birthday-visibility {
     float: right;
-    width: 100px;
-    margin-right: 140px;
+    margin-right: 150px;
     margin-top: -25px;
 }
 .profile-form h3 {
@@ -2183,8 +2186,8 @@ ripple.ripple::after {
     padding-right: 25px;
 }
 .form-item_half img {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     vertical-align: middle;
     margin-right: 5px;
 }
@@ -2212,7 +2215,7 @@ ripple.ripple::after {
     width: 100%;
 }
 .profile-form .form-row.social .form-item_half .form-input {
-    width: 285px;
+    width: 390px;
 }
 .profile-form .form-item_third .form-input {
     width: 100%;
@@ -2454,8 +2457,11 @@ input[type="radio"] {
         cursor: pointer;
         margin: 0 10px
     }
+    .profile-form {
+        margin-left: 30px;
+    }
     .profile-cover {
-        height: 400px;
+        height: 330px;
     }
     .userprofile_img {
         height: 180px;
@@ -2470,9 +2476,76 @@ input[type="radio"] {
         width: 34px;
         text-align: center;
     }
+    .profile-form .form-row {
+        max-width: 680px;
+    }
     .profile-form .form-input {
         font-size: 12px;
     }
+    .form-item_half img {
+        width: 25px;
+        height: 25px;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+    .profile-form .form-row.social .form-item_half .form-input {
+        width: 285px;
+    }
+    .birthday-visibility {
+      width: 100px;
+      margin-right: 140px;
+    }
+    .userID_img {
+      margin-top: 10px;
+      margin-bottom: 30px;
+      width: 150px;
+      height: 110px;
+      border: 1px solid #acacac;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      float: left;
+    }
+    .id_upload_desc {
+      width: 250px;
+      text-align: justify;
+    }
+    .id_upload_desc span {
+      width: 100%;
+      display: block;
+      white-space: normal;
+      font-size: 0.7em;
+      line-height: 14px;
+      padding-top: 10px;
+    }
+    .profile_top.right {
+        float: right;
+        margin-top: 10px;
+    }
+    .profile_top span {
+        font-size: 0.8em;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 25px;
+        margin-left: 230px;
+    }
+
+    .camera {
+        min-width: 44px;
+        width: 44px;
+        padding: 0 10px;
+        background: #cecece;
+        border-radius: 3px;
+        position: absolute;
+        top: 85px;
+        left: 140px;
+        cursor: pointer;
+    }
+    .camera img {
+        height: 18px;
+        margin-top: -5px;
+    }
+
 }
 /* Medium Devices, Desktops
     @media screen and (max-width : 992px) {*/
