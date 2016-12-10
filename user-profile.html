@@ -24,8 +24,10 @@
 <link href="fonts/material/style.css" media="all" rel="stylesheet" type="text/css">
 <link href="fonts/indelibl/style.css" media="all" rel="stylesheet" type="text/css">
 <!--style-->
-<link href="css/styles4.css" media="all" rel="stylesheet" type="text/css" />
+<link href="css/styles.css" media="all" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/vendor/vendor/vendor.min.js">
+</script>
+<script type="text/javascript" src="js/vendor/vendor/vendor-migrate.min.js">
 </script>
 <script type="text/javascript" src="js/vendor/vendor/vendor-migrate.min.js">
 </script>
@@ -180,7 +182,7 @@
 						</svg>
 					</div>
 					<!-- mobile menu -->
-					<menu id="mob_menu" class="menu clearfix">
+					<menu id="mob_menu" class="menu clearfix bg-light">
 						<div class="menu-collection">
 							<a href="javascript:;" class="menu-link">Original Art</a>
 							<a href="javascript:;" class="menu-link">Art Prints</a>
@@ -251,7 +253,7 @@
 
 
 		<!-- start user cover photo -->
-		<section class="profile-cover_wrapper">
+		<section class="profile-cover_wrapper" id="draggable_wrapper">
 			<div class="profile-cover">
 				<div class="profile-cover_inner" id="cover-image-preview">
 
@@ -851,12 +853,13 @@
 	</div>
 
 	<!--Custom Scripts-->
-	<script src="js/vendor/owlCarousel/owl-carousel/owl.carousel.js">
-	</script>
-	<script src="js/general3.js">
+	<script src="js/general.js">
 	</script>
 	<script type="text/javascript" src="js/vendor/vendor/vendor.uploadPreview.min.js">
 	</script>
+	<script type="text/javascript" src="js/vendor/vendor/vendor-ui-custom/vendor-ui.min.js">
+	</script>
+
 	<!--uploadPreview Scripts-->
 	<script type="text/javascript">
 	$(document).ready(function() {
@@ -879,6 +882,11 @@
 
 	});
 	</script>
+	<script>
+  $( function() {
+    $( "#cover-image-preview" ).draggable({ containment: "#draggable-wrapper", scroll: false });
+  } );
+  </script>
 
 
 </body>
