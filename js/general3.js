@@ -23,15 +23,15 @@ var dropMenu = function() {
 	var $drop = $('[dropdown]');
 	// on click on dropdown icon in header
     $trigger.on('click', function(e) {
-	
+
 		// remove active styling of other triggers and dropdowns
         var $data = $(this).attr("trigger");
         $drop.not('[dropdown= ' + $data + ']').removeClass("active");
 		$trigger.not($(this)).removeClass("active");
-		
+
         $(document).find('[dropdown= ' + $data + ']').toggleClass("active");
         $(document).find('[dropdown= ' + $data + ']').find("input[autofocus]").focus();
-        
+
         // remove active styling if already present on click (closing the menu)
         if ($(this).hasClass("active")) {
             $(this).removeClass("active")
@@ -113,8 +113,18 @@ var openRegPanel = function() {
     var a, t = $("[data-popup]");
     $(t.length) && t.on("click", function() {
         var e = $(this),
+            m = e.data("tab"),
             t = e.data("popup");
+            if (m=="register") {
+              $('[data-tab="login"]').removeClass("active");
+              $('[data-tab="registerSelect"]').addClass("active");
 
+              $("#artistProfession").show();
+            }
+            else {
+              $('[data-tab="login"]').addClass("active");
+              $('[data-tab="registerSelect"]').removeClass("active");
+            }
         a = $('[data-popup-id="' + t + '"]'), $("[data-popup-id]").hide(), a.show(), $("body, html").css({
             overflow: "hidden"
         }), a.on("click", function(e) {
@@ -138,7 +148,7 @@ var mobileMenu = function() {
         }
         e.preventDefault();
     });
-    
+
     // hide mobile menu when start scrolling
     $('.main-container').scroll(function() {
         $('#mob_menu').removeClass('open', $('.main-container').scrollTop() > 2);

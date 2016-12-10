@@ -1099,7 +1099,8 @@ ripple.ripple::after {
 }
 .header-top .logo img {
     display: block;
-    height: 100px;
+    height: 90px;
+    padding: 7px;
     width: auto
 }
 .user-options li {
@@ -1158,6 +1159,7 @@ ripple.ripple::after {
     padding-left: 10px;
     padding-right: 40px;
     background: transparent;
+    height: 30px;
     min-width: 380px
 }
 .search input:focus {
@@ -1166,7 +1168,7 @@ ripple.ripple::after {
 .search button {
     position: absolute;
     right: 0;
-    top: 0;
+    top: -2px;
     border: none;
     background: none;
     width: 40px;
@@ -1645,6 +1647,7 @@ ripple.ripple::after {
     max-width: 660px;
     width: 100%;
     margin: auto;
+    margin-top: 4%;
     padding: 20px 20px 35px;
     background-color: rgb(245, 245, 241);
     border-radius: 6px
@@ -2001,6 +2004,10 @@ ripple.ripple::after {
 }
 /* ----------------------- user profile page styles ---------------------------------*/
 
+.profile-cover_wrapper {
+    display: block;
+    position: relative;
+}
 .profile-cover {
     position: relative;
     float: left;
@@ -2010,27 +2017,50 @@ ripple.ripple::after {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
+}
+.profile-cover_inner {
+  display: block;
+  height: 100%;
+  background: url("../images/slider-1.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#coverPhoto-select > input {
+  display: none;
+}
+#coverPhoto-select > label {
+  cursor: pointer;
 }
 .profile_top {
-    height: 110px;
+    height: 130px;
 }
 .userprofile_img {
-    position: relative;
-}
-.userprofile_img img {
     top: -90px;
     height: 250px;
     width: 250px;
     border-radius: 100%;
     display: block;
     position: absolute;
+    background: url("../images/morgan1.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.userprofile_img_wrapper {
+    position: relative;
+}
+.camera_icon_wrapper > input
+{
+    display: none;
 }
 .profile_top span {
     font-size: 0.8em;
     display: inline-block;
     vertical-align: top;
     margin-top: 25px;
-    margin-left: 250px;
+    margin-left: 230px;
 }
 .profile-top-separator {
     vertical-align: bottom;
@@ -2060,6 +2090,7 @@ ripple.ripple::after {
     position: absolute;
     top: 85px;
     left: 140px;
+    cursor: pointer;
 }
 .camera:hover {
     background: #c5c5c5;
@@ -2074,6 +2105,37 @@ ripple.ripple::after {
     margin-right: auto;
     vertical-align: middle;
     margin-top: -5px;
+}
+.userID_img {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  width: 150px;
+  height: 110px;
+  border: 1px solid #acacac;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  float: left;
+}
+.id_select_button_wrapper {
+  float: left;
+  margin-left: 20px;
+
+}
+.id_select_button_wrapper > input {
+    display: none;
+}
+.id_upload_desc {
+  width: 250px;
+  text-align: justify;
+}
+.id_upload_desc span {
+  width: 100%;
+  display: block;
+  white-space: normal;
+  font-size: 0.7em;
+  line-height: 14px;
+  padding-top: 10px;
 }
 .profile-form {
     width: 100%;
@@ -2093,7 +2155,7 @@ ripple.ripple::after {
 .birthday-visibility {
     float: right;
     width: 100px;
-    margin-right: 130px;
+    margin-right: 140px;
     margin-top: -25px;
 }
 .profile-form h3 {
@@ -2157,7 +2219,7 @@ ripple.ripple::after {
 }
 .profile-form input[type="checkbox"],
 input[type="radio"] {
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 30px;
 }
 .profile-form textarea {
@@ -2172,6 +2234,7 @@ input[type="radio"] {
 }
 .profile-form .btn {
     margin: 20px 20px 20px 0;
+    cursor: pointer;
 }
 .btn.blackWhite {
     background: #fff;
@@ -2236,6 +2299,7 @@ input[type="radio"] {
     }
     .header-top .logo img {
         height: 80px;
+        padding: 7px;
     }
     .header-top {
         height: 80px;
@@ -2312,7 +2376,7 @@ input[type="radio"] {
         margin-top: 10px;
     }
     .profile_top.right {
-        margin-top: 30px;
+        padding-top: 30px;
     }
     .btn {
         min-width: 100px;
@@ -2336,6 +2400,10 @@ input[type="radio"] {
     }
     .popup-registration-content .form-input {
         font-size: 12px;
+    }
+
+    .popup-inner {
+        margin-top: 2%;
     }
     #forgotPass_row .form-input {
         font-size: 12px;
@@ -2389,7 +2457,7 @@ input[type="radio"] {
     .profile-cover {
         height: 400px;
     }
-    .userprofile_img img {
+    .userprofile_img {
         height: 180px;
         width: 180px;
         top: -60px;
@@ -2445,6 +2513,7 @@ input[type="radio"] {
         background: transparent;
         min-width: 50px;
         width: 150px;
+        height: 18px;
     }
     .dropdown .drop-trigger span {
         font-size: 0.8em;
@@ -2898,6 +2967,7 @@ input[type="radio"] {
         background: transparent;
         min-width: 50px;
         width: 150px;
+        height: 18px;
     }
     .dropdown .drop-trigger span {
         font-size: 0.8em;

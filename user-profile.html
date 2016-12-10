@@ -40,7 +40,7 @@
 			<div class="content-wrapper clearfix">
 				<div class="left">
 					<a class="logo" href="">
-						<img src="images/logo.svg" alt=""/>
+						<img src="images/logo2.png" alt=""/>
 					</a>
 					<!-- currency dropdown -->
 					<div class="dropdown" id="chooseCurrency">
@@ -242,15 +242,25 @@
 				</ul>
 			</div>
 		</section>
-		<!-- start main slider -->
-		<section class="main-slider">
-			<div class="profile-cover" bg-img>
-				<img class="hidden-img" src="images/slider-2.jpg" alt=""/>
 
+
+
+
+
+
+
+
+		<!-- start user cover photo -->
+		<section class="profile-cover_wrapper">
+			<div class="profile-cover">
+				<div class="profile-cover_inner" id="cover-image-preview">
+
+
+				</div>
 			</div>
 
 		</section>
-		<!-- end main slider -->
+		<!-- end user cover photo -->
 
 
 
@@ -279,30 +289,33 @@
 				<!-- start user profile form header -->
 				<div class="row">
 					<div class="profile_top left">
-						<div class="userprofile_img">
-							<img src="images/morgan1.jpg">
+						<div class="userprofile_img_wrapper">
+							<div class="userprofile_img" id="profile-image-preview">
 						</div>
 						<div class="camera_icon_wrapper">
-							<button class="btn camera">
-								<img src="images/icons/camera.png">
-							</button>
+							<label for="profile-img-file-input" class="btn camera">
+									<img src="images/icons/camera.png">
+							</label>
+							<input id="profile-img-file-input" type="file"/>
 						</div>
 						<div class="">
 							<span>Maximum upload file size: 5MB. JPG, PNG and GIF files only.</span>
 						</div>
 					</div>
-
-					<div class="profile_top right">
-						<button class="btn dark">
-							Choose cover
-						</button>
-						<button class="btn bin">
-							<img src="images/icons/waste_bin.png">
-						</button>
-					</div>
-
 				</div>
+				<div class="profile_top right" id="coverPhoto-select">
 
+
+
+					<label for="cover-img-file-input" class="btn dark">
+							Choose cover
+					</label>
+					<input id="cover-img-file-input" type="file"/>
+
+					<button class="btn bin">
+						<img src="images/icons/waste_bin.png">
+					</button>
+				</div>
 			</div>
 			<hr class="profile-top-separator"/>
 		</section>
@@ -325,8 +338,6 @@
 								Personal Info
 							</b>
 						</h3>
-
-
 						<!-- display name -->
 						<div class="form-row">
 							<div class="form-item form-item_full">
@@ -345,18 +356,6 @@
 									</div>
 							</div>
 						</div>
-
-
-
-
-
-
-
-
-
-
-
-
 						<!-- birthday -->
 						<div class="form-row birthday">
 							<div class="form-row">
@@ -394,20 +393,6 @@
 								</div>
 							</div>
 						</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 						<!-- gender -->
 						<div class="form-row">
 							<div class="form-item form-item_full">
@@ -421,17 +406,63 @@
 							</div>
 						</div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 						<!-- id upload -->
-						<!--
 						<div class="form-row">
 							<div class="form-item form-item_full">
-
+							<label for="gender" class="form-label">
+								Upload your ID
+							</label>
 							</div>
-							<div class="form-item form-item_full">
 
+
+
+							<div class="form-item form-item_full">
+								<div class="userID_img" id="id-image-preview">
+								</div>
+								<div class="id_select_button_wrapper">
+									<div class="id_upload_desc">
+										<span>
+											In order to verify your account, we need a digital
+											copy of your government issued ID. This will help
+											us ensure that you are who you say you are, and also
+											that payments are made to the rightful owner.
+										</span>
+									</div>
+									<label for="id-img-file-input" class="btn dark">
+											Choose
+									</label>
+									<input id="id-img-file-input" type="file"/>
+								</div>
 							</div>
 						</div>
-					-->
+
+
+
+
+
+
+
+
+
+
+
+
 
 						<!-- biography -->
 						<div class="form-row">
@@ -653,13 +684,20 @@
 
 
 
+		<!-- upload error start -->
+		<!--
+		<div class="popup-wrapper" data-popup-id="upload-error">
+			<div class="popup-inner ie-popup">
 
+				<div class="errorIcon large"></div>
+				<h5>Please correct following</h5>
+				<span>Selected file is too big. Please select file up to 5MB.</span>
+				<span>Selected file is not supported big. Please use JPG or PNG file.</span>
+				<a href="javascript:;" class="btn clearBtn">Cancel</a>
+			</div>
+		</div>
 
-
-
-
-
-
+	-->
 
 
 
@@ -817,6 +855,32 @@
 	</script>
 	<script src="js/general3.js">
 	</script>
+	<script type="text/javascript" src="js/vendor/vendor/vendor.uploadPreview.min.js">
+	</script>
+	<!--uploadPreview Scripts-->
+	<script type="text/javascript">
+	$(document).ready(function() {
+		// profile image upload control
+		$.uploadPreview({
+			input_field: "#profile-img-file-input",
+			preview_box: "#profile-image-preview",
+		});
+		// personal id image upload control
+		$.uploadPreview({
+			input_field: "#id-img-file-input",
+			preview_box: "#id-image-preview",
+		});
+		// cover image upload control
+		$.uploadPreview({
+			input_field: "#cover-img-file-input",
+			preview_box: "#cover-image-preview",
+		});
+
+
+	});
+	</script>
+
+
 </body>
 
 </html>
